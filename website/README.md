@@ -12,7 +12,7 @@ This is the unified PTK site: promotional homepage at `/`, download page at `/do
 - Release tags use `v<version>` (for example, `v1.9.0`) and include the exact ARM64 asset `PTK-Schedule-<version>-arm64-v8a.apk`. The approved 1.9.0 filename is `PTK-Schedule-1.9.0-arm64-v8a.apk`.
 - `/api/admin/upload` is retired and responds with `410 Gone`; use GitHub Releases for APK files, then register the version in `/admin`.
 
-Before registering the approved 1.9.0 APK, make sure that public asset has been attached to a `v1.9.0` GitHub Release in the approved repository. The dashboard checks for the release and exact asset before changing D1 metadata.
+The approved `v1.9.0` GitHub Release is live with the exact APK asset. The dashboard checks the release tag and filename before changing D1 metadata.
 
 ## Routes
 
@@ -41,4 +41,4 @@ The Wrangler configuration contains a local placeholder D1 database ID. Before a
 
 ## App behavior validation
 
-The GitHub asset download could not be smoke-tested against a real release because the approved repository currently has no public Releases. The 1.9.0 APK was not launched on Android: this environment has no Android device, emulator, SDK, or ADB. Do not claim that timetable scanning, OCR, or notifications were runtime-tested until those behaviors are observed on an Android device with a sample timetable.
+The public `v1.9.0` GitHub asset was streamed through the backend and its SHA-256 matched the published asset digest. The APK was not launched on Android: this environment has no Android device, emulator, SDK, or ADB. Do not claim that timetable scanning, OCR, or notifications were runtime-tested until those behaviors are observed on an Android device with a sample timetable.
