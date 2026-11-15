@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244fb5">
+  <meta name="description" content="ดาวน์โหลด PTK ตารางเรียนสำหรับ Android พร้อมดูวิธีนำเข้าตาราง เลือก OCR แบบเก็บภาพไว้ในเครื่องหรือส่งให้ Gemini และตั้งการแจ้งเตือน">
+  <title>ดาวน์โหลด PTK ตารางเรียน · OCR และการแจ้งเตือน</title>
+  <link rel="icon" type="image/jpeg" href="/ptk-icon.jpg">
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="PTK ตารางเรียน หน้าแรก">
+        <img src="/ptk-icon.jpg" width="43" height="43" alt="">
+        <span class="brand-name">PTK ตารางเรียน<small>Pathumthep Wittayakarn</small></span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="เมนูหลัก">
+          <a class="nav-link" href="/">หน้าหลัก</a>
+          <a class="nav-link is-current" href="/download" aria-current="page">ดาวน์โหลด</a>
+        </nav>
+        <a class="button button-primary button-small" href="/download" aria-label="ดูรุ่นล่าสุดและดาวน์โหลด APK">ดาวน์โหลด APK
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 18v2h16v-2"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="download-hero" aria-labelledby="download-title">
+      <div class="wrap download-hero-inner" data-reveal>
+        <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>PTK · ANDROID APK</span>
+        <h1 id="download-title">ดาวน์โหลด PTK ตารางเรียน</h1>
+          <p class="hero-lead">ตรวจสอบเวอร์ชันแล้วดาวน์โหลด APK สำหรับ Android ARM64 จากนั้นนำเข้าตารางและเลือกการเตือนที่ต้องการ</p>
+      </div>
+    </section>
+
+    <section class="release-section" aria-label="รายละเอียดรุ่นล่าสุด">
+      <div class="wrap">
+        <article class="download-card" data-reveal data-delay="1">
+          <div class="download-main">
+            <div class="download-main-head">
+              <small>LATEST RELEASE</small>
+              <span class="status-pill is-loading" id="release-status" aria-live="polite">กำลังตรวจสอบ</span>
+            </div>
+            <div class="download-app">
+              <img src="/app-icon.jpg" width="65" height="65" alt="">
+              <div><small>STUDENT EDITION</small><h2>PTK ตารางเรียน</h2><p>สำหรับนักเรียนปทุมเทพวิทยาคาร</p></div>
+            </div>
+            <div class="version-row"><small>เวอร์ชันล่าสุด</small><strong data-release-version>—</strong></div>
+            <div class="release-facts" aria-label="ข้อมูลไฟล์">
+              <div class="release-fact"><small>แพลตฟอร์ม</small><strong data-release-platform>Android</strong></div>
+              <div class="release-fact"><small>สถาปัตยกรรม</small><strong data-release-architecture>ARM64</strong></div>
+              <div class="release-fact"><small>ขนาดไฟล์</small><strong data-release-size>—</strong></div>
+              <div class="release-fact"><small>วันที่เผยแพร่</small><strong data-release-date>—</strong></div>
+              <div class="release-fact" style="grid-column: 1 / -1"><small>ชื่อไฟล์</small><strong data-release-filename>—</strong></div>
+            </div>
+            <p class="release-unavailable" id="release-unavailable" role="status">กำลังตรวจสอบข้อมูลรุ่นล่าสุด…</p>
+            <button class="retry-button" id="retry-release" type="button" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6.2 9a7 7 0 0 1 11.6-2L20 12M4 12l2.2 5a7 7 0 0 0 11.6-2"/></svg>ลองตรวจสอบอีกครั้ง</button>
+            <a class="button button-primary download-action" id="download-button" href="/download/latest" hidden>ดาวน์โหลดไฟล์ APK
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 18v2h16v-2"/></svg>
+            </a>
+          </div>
+          <aside class="download-aside" aria-label="ภาพประกอบแพ็กเกจ Android">
+            <div class="package-card">
+              <div class="package-card-head">
+                <img src="/app-icon.jpg" width="47" height="47" alt="">
+                <span><b>PTK ตารางเรียน</b><small>ANDROID PACKAGE</small></span>
+              </div>
+              <div class="package-row"><span>เวอร์ชัน</span><strong data-release-version>—</strong></div>
+              <div class="package-row"><span>สถาปัตยกรรม</span><strong data-release-architecture>ARM64</strong></div>
+              <div class="package-row"><span>ขนาดไฟล์</span><strong data-release-size>—</strong></div>
+              <p class="package-label">APK · DIRECT DOWNLOAD</p>
+            </div>
+          </aside>
+        </article>
+
+        <article class="release-notes" id="release-notes" hidden data-reveal>
+          <h3><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>บันทึกการเปลี่ยนแปลง · รุ่น <span id="notes-version">—</span></h3>
+          <p id="notes-text"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="install-section" aria-labelledby="install-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker">ดาวน์โหลด แล้วเริ่มใช้งาน</span>
+          <h2 id="install-title">ติดตั้ง นำเข้าตาราง แล้วตั้งเตือน</h2>
+          <p>ขั้นตอนการนำเข้าตารางอิงจากการทดสอบ PTK 1.9.0 ด้วยตารางตัวอย่าง</p>
+        </div>
+        <aside class="privacy-choice" data-reveal aria-labelledby="privacy-title">
+          <span class="privacy-choice-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div><h3 id="privacy-title">เลือกวิธีอ่านภาพตามที่คุณสบายใจ</h3><p>หน้าตัวเลือกของแอประบุว่า OCR บนอุปกรณ์เก็บภาพไว้ในเครื่อง ส่วน Gemini จะส่งภาพไปยัง Google เลือกวิธีที่ต้องการก่อนเริ่มสแกน</p></div>
+        </aside>
+        <div class="install-steps">
+          <article class="install-step" data-reveal>
+            <span class="install-step-label">STEP 01 / INSTALL</span>
+            <h3>ดาวน์โหลดและติดตั้ง APK</h3>
+            <p>แตะปุ่มดาวน์โหลดด้านบน เปิดไฟล์ APK แล้วทำตามคำแนะนำที่ Android แสดง</p>
+          </article>
+          <article class="install-step" data-reveal data-delay="1">
+            <span class="install-step-label">STEP 02 / IMPORT</span>
+            <h3>เลือก OCR แล้วครอปตาราง</h3>
+            <p>เลือก OCR บนอุปกรณ์หรือ Gemini แล้วครอปส่วนที่มีเลขคาบ เวลา และวันเรียน</p>
+          </article>
+          <article class="install-step" data-reveal data-delay="2">
+            <span class="install-step-label">STEP 03 / REVIEW &amp; REMINDERS</span>
+            <h3>ตรวจผลและเปิดการเตือน</h3>
+            <p>ทบทวนและแก้ข้อมูลวิชา/คาบ จากนั้นเลือกการเตือนที่ต้องการก่อนเริ่มและก่อนหมดคาบ</p>
+          </article>
+        </div>
+        <p class="install-note" data-reveal><strong>การแจ้งเตือน:</strong> Android อาจขออนุญาต Notifications และ Alarms &amp; reminders เพื่อให้ตัวเตือนทำงาน เลือกเปิดเฉพาะที่ต้องการในแอปได้ และตรวจการอนุญาตของ Android ด้วย</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="/" aria-label="กลับหน้าแรก PTK ตารางเรียน"><img src="/ptk-icon.jpg" width="29" height="29" alt="">PTK ตารางเรียน</a>
+      <span>สำหรับนักเรียนโรงเรียนปทุมเทพวิทยาคาร</span>
+      <nav class="footer-links" aria-label="ลิงก์ท้ายหน้า"><a class="footer-link" href="/">หน้าหลัก</a><a class="footer-link" href="/admin">ผู้ดูแลระบบ</a></nav>
+    </div>
+  </footer>
+  <script src="/motion.js" defer></script>
+  <script>
+    (() => {
+      const status = document.getElementById("release-status");
+      const unavailable = document.getElementById("release-unavailable");
+      const downloadButton = document.getElementById("download-button");
+      const retryButton = document.getElementById("retry-release");
+
+      const showUnavailable = (message, title = "ตรวจสอบข้อมูลไม่ได้") => {
+        status.textContent = title;
+        status.classList.remove("is-loading");
+        status.classList.add("is-unavailable");
+        unavailable.textContent = message;
+        unavailable.hidden = false;
+        retryButton.hidden = false;
+        downloadButton.hidden = true;
+      };
+
+      const formatBytes = (bytes) => {
+        const mb = bytes / (1024 * 1024);
+        const value = new Intl.NumberFormat("th-TH", { maximumFractionDigits: 1 }).format(mb);
+        return `${value} MB`;
+      };
+
+      async function loadRelease() {
+        status.textContent = "กำลังตรวจสอบ";
+        status.classList.remove("is-unavailable");
+        status.classList.add("is-loading");
+        unavailable.textContent = "กำลังตรวจสอบข้อมูลรุ่นล่าสุด…";
+        unavailable.hidden = false;
+        retryButton.hidden = true;
+        downloadButton.hidden = true;
+        document.getElementById("release-notes").hidden = true;
+        try {
+          const [response, compatibleResponse] = await Promise.all([
+            fetch("/api/releases/latest", { cache: "no-store" }),
+            fetch("/api/release", { cache: "no-store" }).catch(() => null)
+          ]);
+          if (response.status === 404) {
+            showUnavailable("ยังไม่มีข้อมูลรุ่นล่าสุดที่เผยแพร่ในขณะนี้", "ยังไม่มีรุ่นที่เผยแพร่");
+            return;
+          }
+          if (!response.ok) throw new Error(`Release request failed (${response.status}).`);
+          const release = await response.json();
+          const downloadTarget = typeof release.downloadUrl === "string" ? new URL(release.downloadUrl, window.location.origin) : null;
+          if (!release.version || !downloadTarget || downloadTarget.origin !== window.location.origin || downloadTarget.pathname !== "/download/latest") throw new Error("Latest release metadata is incomplete or invalid.");
+          const compatible = compatibleResponse?.ok ? await compatibleResponse.json() : null;
+
+          document.querySelectorAll("[data-release-version]").forEach((node) => { node.textContent = release.version; });
+          const sizeText = Number.isFinite(compatible?.sizeBytes) && compatible.sizeBytes > 0 ? formatBytes(compatible.sizeBytes) : "ไม่ระบุ";
+          document.querySelectorAll("[data-release-size]").forEach((node) => { node.textContent = sizeText; });
+          document.querySelectorAll("[data-release-architecture]").forEach((node) => { node.textContent = compatible?.architecture || "ARM64"; });
+          document.querySelectorAll("[data-release-platform]").forEach((node) => { node.textContent = compatible?.platform || "Android"; });
+          document.querySelectorAll("[data-release-filename]").forEach((node) => { node.textContent = compatible?.fileName || "ไฟล์ APK รุ่นล่าสุด"; });
+          const publishedAt = release.publishedAt ? new Date(release.publishedAt) : null;
+          const dateText = publishedAt && !Number.isNaN(publishedAt.valueOf()) ? new Intl.DateTimeFormat("th-TH", { dateStyle: "medium" }).format(publishedAt) : "ไม่ระบุ";
+          document.querySelectorAll("[data-release-date]").forEach((node) => { node.textContent = dateText; });
+
+          if (release.releaseNotes && String(release.releaseNotes).trim()) {
+            document.getElementById("notes-version").textContent = release.version;
+            document.getElementById("notes-text").textContent = release.releaseNotes;
+            document.getElementById("release-notes").hidden = false;
+          }
+          status.textContent = "พร้อมดาวน์โหลด";
+          status.classList.remove("is-loading", "is-unavailable");
+          status.classList.add("is-available");
+          unavailable.hidden = true;
+          retryButton.hidden = true;
+          downloadButton.href = `${downloadTarget.pathname}${downloadTarget.search}${downloadTarget.hash}`;
+          downloadButton.hidden = false;
+        } catch (error) {
+          showUnavailable("ไม่สามารถโหลดข้อมูลรุ่นล่าสุดได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง", "โหลดข้อมูลไม่สำเร็จ");
+          console.warn("Could not load the latest APK release details.", error);
+        }
+      }
+
+      retryButton.addEventListener("click", loadRelease);
+      loadRelease();
+    })();
+  </script>
+</body>
+</html>
