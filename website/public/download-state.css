@@ -1,0 +1,15 @@
+.release-unavailable {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--wash);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+.release-unavailable[hidden], .download-action[hidden] { display: none !important; }
+.available.unavailable {
+  color: #6d5270;
+  background: #f5eef8;
+}

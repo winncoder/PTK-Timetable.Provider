@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ptk-schedule-download",
+  "main": "src/legacy-redirect.js",
+  "compatibility_date": "2026-11-15",
+  "workers_dev": true
+}

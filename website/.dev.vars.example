@@ -1,0 +1,2 @@
+# Local development only. Replace this locally; never use it in production.
+ADMIN_TOKEN=replace-with-a-random-local-test-token

@@ -1,0 +1,15 @@
+{
+  "name": "ptk-timetable-unified-website",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "sync-assets": "node scripts/sync-assets.mjs",
+    "dev": "npm run sync-assets && wrangler dev",
+    "test": "node --test",
+    "deploy": "npm run sync-assets && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.162.0"
+  }
+}
