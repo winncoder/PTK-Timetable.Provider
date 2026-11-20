@@ -3,144 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244fb5">
+  <meta name="theme-color" content="#162d62">
   <meta name="description" content="สแกนตารางเรียน PTK ด้วย OCR เลือกวิธีอ่านที่เหมาะกับคุณ ตรวจผลก่อนบันทึก แล้วตั้งการแจ้งเตือนเวลาเรียน">
   <title>PTK ตารางเรียน · สแกนตารางและตั้งเตือนคาบ</title>
   <link rel="icon" type="image/jpeg" href="/ptk-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
   <div id="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="/" aria-label="PTK ตารางเรียน หน้าแรก">
-        <img src="/ptk-icon.jpg" width="43" height="43" alt="">
-        <span class="brand-name">PTK ตารางเรียน<small>ข้อมูลรุ่นและดาวน์โหลด</small></span>
-      </a>
-      <div class="nav-right">
-        <nav class="nav-links" aria-label="เมนูหลัก">
-          <a class="nav-link" href="#features">ข้อมูลแอป</a>
-          <a class="nav-link" href="#steps">วิธีใช้งาน</a>
-          <a class="nav-link" href="/download">ดาวน์โหลด APK</a>
-        </nav>
-        <a class="button button-primary button-small" href="/download">ไปหน้าดาวน์โหลด
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="home-hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy" data-reveal>
-          <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>ผู้ช่วยเรื่องตารางเรียนของนักเรียน PTK</span>
-          <h1 id="hero-title">สแกนตารางเรียน<br><span>แล้วตั้งเตือนก่อนถึงคาบ</span></h1>
-          <p class="hero-lead">เลือก OCR บนอุปกรณ์หรือ Gemini ตรวจและแก้ผลก่อนบันทึก แล้วเปิดการเตือนตามที่ต้องการ</p>
-          <div class="hero-actions">
-            <a class="button button-light" href="/download">ดูรุ่นล่าสุดและดาวน์โหลด
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 18v2h16v-2"/></svg>
-            </a>
-            <a class="button button-ghost-light" href="#steps">ดูวิธีทำงาน</a>
-          </div>
-          <div class="hero-tags" aria-label="จุดเด่นของแอป">
-            <span class="hero-tag"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 18h4"/></svg>เลือกวิธี OCR</span>
-            <span class="hero-tag"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>ตรวจผลก่อนบันทึก</span>
-            <span class="hero-tag"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M3 12h2m14 0h2"/><circle cx="12" cy="12" r="4"/></svg>ตั้งเตือนคาบ</span>
-          </div>
-        </div>
-
-        <div class="hero-showcase" data-reveal data-delay="1" role="group" aria-label="ภาพประกอบขั้นตอนสแกน ตรวจผล และตั้งเตือน">
-          <div class="showcase-orbit" aria-hidden="true"></div>
-          <div class="release-tile flow-tile">
-            <div class="release-tile-top">
-              <div class="app-identity">
-                <img src="/app-icon.jpg" width="52" height="52" alt="">
-                <span><b>PTK ตารางเรียน</b><small>ภาพประกอบขั้นตอนการใช้</small></span>
-              </div>
-              <span class="status-pill is-available">ขั้นตอนในแอป</span>
-            </div>
-            <div class="flow-preview-list">
-              <div class="flow-preview-step">
-                <span class="flow-step-number">01</span>
-                <div class="flow-step-copy"><small>เลือกวิธีอ่านตาราง</small><strong>บนอุปกรณ์ หรือ Gemini</strong><div class="flow-choice-row"><span class="flow-choice is-selected">OCR บนอุปกรณ์</span><span class="flow-choice">Gemini</span></div></div>
-              </div>
-              <div class="flow-preview-step">
-                <span class="flow-step-number">02</span>
-                <div class="flow-step-copy"><small>ตรวจผลสแกน</small><strong>ทบทวนชื่อวิชาและคาบ</strong><span class="flow-hint">แก้ไขก่อนบันทึกตาราง</span></div>
-              </div>
-              <div class="flow-preview-step flow-reminder-preview">
-                <span class="flow-step-number">03</span>
-                <div class="flow-step-copy"><small>ตั้งการแจ้งเตือน</small><strong>ก่อนเริ่มคาบ · ก่อนหมดคาบ</strong><span class="flow-hint">เลือกเปิดเฉพาะที่ต้องการ</span></div>
-              </div>
-            </div>
-            <p class="tile-footnote"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg><span>เลือกวิธีอ่านภาพได้ตามที่สบายใจ</span></p>
-          </div>
-          <span class="float-label one" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>มีตัวเลือก OCR บนอุปกรณ์</span>
-          <span class="float-label two" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M3 12h2m14 0h2"/><circle cx="12" cy="12" r="4"/></svg>มีการเตือนก่อนถึงคาบ</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section feature-section" id="features" aria-labelledby="features-title">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <span class="section-kicker">จากภาพตารางสู่ตารางเรียน</span>
-          <h2 id="features-title">ดูผลก่อน แล้วค่อยบันทึก</h2>
-          <p>ทดสอบกับตารางตัวอย่างแล้ว แอปมีขั้นตอนให้เลือกวิธีอ่านภาพและทบทวนผล OCR ก่อนจัดตาราง</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card" data-reveal>
-            <span class="feature-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h5M4 4v5m16-5h-5m5 0v5M4 20h5m-5 0v-5m16 5h-5m5 0v-5"/><path d="M8 12h8M12 8v8"/></svg></span>
-            <h3>เลือกวิธี OCR</h3>
-            <p>มี OCR บนอุปกรณ์ซึ่งระบุว่ารูปอยู่ในเครื่อง หรือเลือก Gemini ซึ่งส่งภาพไปยัง Google</p>
-          </article>
-          <article class="feature-card" data-reveal data-delay="1">
-            <span class="feature-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/><path d="m3 12 1.2 1.2L6 11.4"/></svg></span>
-            <h3>ตรวจและแก้ผล</h3>
-            <p>ทบทวนผลที่อ่านได้ เปลี่ยนชื่อวิชาได้ และมีขั้นตอนถัดไปสำหรับแก้ข้อมูลรายคาบ</p>
-          </article>
-          <article class="feature-card" data-reveal data-delay="2">
-            <span class="feature-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M9 2h6M18 5l1.5-1.5"/></svg></span>
-            <h3>เลือกการเตือน</h3>
-            <p>เปิดหรือปิดการเตือนตารางพิเศษ ก่อนเริ่มคาบ 10 นาที และก่อนหมดคาบ 10 นาทีได้แยกกัน</p>
-          </article>
-        </div>
-        <p class="scan-test-note" data-reveal><strong>จากการทดสอบกับตารางตัวอย่าง 10 คาบ:</strong> แอปแบ่งช่วงสแกนเป็นคาบ 1–3, 4–6, 7–9 และ 10 ก่อนให้ตรวจและรวมผล</p>
-      </div>
-    </section>
-
-    <section class="section how-section" id="steps" aria-labelledby="steps-title">
-      <div class="wrap how-grid">
-        <div class="how-copy" data-reveal>
-          <span class="section-kicker">สแกน ตรวจ ตั้งเตือน</span>
-          <h2 id="steps-title">เริ่มจากภาพตารางเรียนของคุณ</h2>
-          <p>ครอปภาพให้เห็นเลขคาบ เวลา และวันเรียน แล้วตรวจผล OCR ก่อนบันทึกเป็นตาราง</p>
-        </div>
-        <div class="steps" aria-label="ขั้นตอนนำเข้าตารางและตั้งเตือน">
-          <div class="step" data-reveal><span class="step-number" aria-hidden="true">1</span><span><b>เลือกวิธีอ่านและครอปภาพ</b><small>เลือก OCR บนอุปกรณ์หรือ Gemini แล้วครอปส่วนที่มีเลขคาบ เวลา และวัน</small></span></div>
-          <div class="step" data-reveal data-delay="1"><span class="step-number" aria-hidden="true">2</span><span><b>ตรวจชื่อวิชาและข้อมูลคาบ</b><small>ทบทวนสิ่งที่ OCR อ่านได้ เปลี่ยนชื่อวิชา และแก้คาบในขั้นตอนถัดไป</small></span></div>
-          <div class="step" data-reveal data-delay="2"><span class="step-number" aria-hidden="true">3</span><span><b>เปิดการเตือนที่ต้องการ</b><small>อนุญาตการแจ้งเตือนและ Alarms &amp; reminders ใน Android หากต้องการใช้ตัวเตือน</small></span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bottom-cta" aria-labelledby="cta-title">
-      <div class="wrap cta-inner" data-reveal>
-        <div><h2 id="cta-title">พร้อมเริ่มจัดตารางเรียนแล้วหรือยัง?</h2><p>ดูเวอร์ชันล่าสุดและขั้นตอนติดตั้ง PTK สำหรับ Android ได้ที่หน้าดาวน์โหลด</p></div>
-        <a class="button button-white" href="/download">ดูรุ่นล่าสุดและดาวน์โหลด<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <a class="footer-brand" href="/" aria-label="กลับหน้าแรก PTK ตารางเรียน"><img src="/ptk-icon.jpg" width="29" height="29" alt="">PTK ตารางเรียน</a>
-      <span>สำหรับนักเรียนโรงเรียนปทุมเทพวิทยาคาร</span>
-      <nav class="footer-links" aria-label="ลิงก์ท้ายหน้า"><a class="footer-link" href="/download">ดาวน์โหลด</a><a class="footer-link" href="/admin">ผู้ดูแลระบบ</a></nav>
-    </div>
-  </footer>
-  <script src="/motion.js" defer></script>
+  <div id="app-root"><div class="boot-screen" role="status">กำลังเปิด PTK ตารางเรียน…</div></div>
+  <noscript><main class="noscript-message"><h1>PTK ตารางเรียน</h1><p>เปิด JavaScript เพื่อดูรายละเอียดแอปและรุ่นดาวน์โหลด</p><a href="/download">ไปหน้าดาวน์โหลด</a></main></noscript>
+  <script type="module" src="/assets/site-app.js"></script>
 </body>
 </html>

@@ -5,11 +5,18 @@
   "version": "1.0.0",
   "scripts": {
     "sync-assets": "node scripts/sync-assets.mjs",
-    "dev": "npm run sync-assets && wrangler dev",
+    "build:site": "esbuild client/site.jsx --bundle --minify --format=esm --outfile=public/assets/site-app.js --loader:.jsx=jsx",
+    "dev": "npm run sync-assets && npm run build:site && wrangler dev",
     "test": "node --test",
-    "deploy": "npm run sync-assets && wrangler deploy"
+    "deploy": "npm run sync-assets && npm run build:site && wrangler deploy"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.181.0"
   },
   "devDependencies": {
+    "esbuild": "^0.25.12",
     "wrangler": "^4.162.0"
   }
 }
